@@ -26,6 +26,10 @@ public class Diretor extends Funcionario{
 
     @Override
     public String toString() {
-        return "Diretor - " + super.toString() + "\nSubalternos:\n" + subalternos;
+        String subs="";
+        for (Funcionario sub: subalternos){
+            subs=subs + sub + "\n";
+        }
+        return "Diretor - " + super.toString() + "\n" + (subalternos.size()) + " Subalternos:\n" + subs;
     }
 }
