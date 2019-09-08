@@ -12,15 +12,17 @@
         classes que modele esta situação. Faça um exemplo de uso.
 */
 
-public class Funcionario {
+public abstract class Funcionario {
     private String nome;
     private String CPF;
     private double salarioBase;
+    private double salarioLiquido;
 
     public Funcionario (String nome, String CPF, double salarioBase){
         this.nome = nome;
         this.CPF = CPF;
         this.salarioBase = salarioBase;
+        salarioLiquido = salarioBase - salarioBase*0.1;
     }
 
     public String getNome() {        return nome;    }
@@ -28,6 +30,8 @@ public class Funcionario {
     public String getCPF() {        return CPF;    }
 
     public double getSalarioBase() {        return salarioBase;    }
+
+    public double getSalarioLiquido() {        return salarioLiquido;    }
 
     public void setNome(String nome) {        this.nome = nome;    }
 
@@ -37,6 +41,6 @@ public class Funcionario {
 
     @Override
     public String toString() {
-        return "Funcionario - Nome: " + nome + " CPF: " + CPF + "Salário Base: " + salarioBase;
+        return "Nome: " + nome + " CPF: " + CPF + "Salário Base: " + salarioBase;
     }
 }
