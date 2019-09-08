@@ -9,7 +9,7 @@ public class FuncionarioChao extends Funcionario {
     private double percentualPericulosidade;
 
     public FuncionarioChao(String nome, String CPF, double salarioBase, double percentualPericulosidade) {
-        super(nome, CPF, (salarioBase+salarioBase*percentualPericulosidade));
+        super(nome, CPF, salarioBase);
         this.percentualPericulosidade = percentualPericulosidade;
     }
 
@@ -17,8 +17,9 @@ public class FuncionarioChao extends Funcionario {
 
     @Override
     public String toString() {
-        return "Funcionário do chão de fábrica - " + super.toString() +
-                " Percentual de Periculosidade: " + percentualPericulosidade;
+        return "\nFuncionário do chão de fábrica - " + super.toString() +
+                " Percentual de Periculosidade: " + percentualPericulosidade +
+                " Salário líquido: " + (super.getSalarioLiquido() + (super.getSalarioBase()*percentualPericulosidade));
     }
 }
 

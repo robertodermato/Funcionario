@@ -20,7 +20,7 @@ public class Diretor extends Funcionario{
     }
 
     public double getSalarioLiquido(){
-        double salarioLiquido = super.getSalarioLiquido()*0.0001*(subalternos.size());
+        double salarioLiquido = super.getSalarioLiquido() + (super.getSalarioLiquido()*0.0001*(subalternos.size()));
         return salarioLiquido;
     }
 
@@ -28,8 +28,8 @@ public class Diretor extends Funcionario{
     public String toString() {
         String subs="";
         for (Funcionario sub: subalternos){
-            subs=subs + sub + "\n";
+            subs=subs + sub;
         }
-        return "Diretor - " + super.toString() + "\n" + (subalternos.size()) + " Subalternos:\n" + subs;
+        return "\nDiretor - " + super.toString() + "\n" + (subalternos.size()) + " Subalternos - Salário líquido: " + getSalarioLiquido();
     }
 }

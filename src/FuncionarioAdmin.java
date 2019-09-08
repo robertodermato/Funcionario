@@ -25,6 +25,6 @@ public class FuncionarioAdmin extends Funcionario{
 
     @Override
     public String toString() {
-        return "Funcionario Administrativo - " + super.toString() + " Ano Contratado: " + anoContratado;
+        return "\nFuncionario Administrativo - " + super.toString() + " Ano Contratado: " + anoContratado + " Salário Líquido: " + getSalarioLiquido();
     }
 }

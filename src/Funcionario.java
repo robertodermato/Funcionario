@@ -22,7 +22,7 @@ public abstract class Funcionario {
         this.nome = nome;
         this.CPF = CPF;
         this.salarioBase = salarioBase;
-        salarioLiquido = salarioBase - salarioBase*0.1;
+        salarioLiquido = salarioBase + salarioBase*0.1;
     }
 
     public String getNome() {        return nome;    }
@@ -41,6 +41,6 @@ public abstract class Funcionario {
 
     @Override
     public String toString() {
-        return "Nome: " + nome + " CPF: " + CPF + "Salário Base: " + salarioBase;
+        return "Nome: " + nome + " CPF: " + CPF + " Salário Base: " + salarioBase;
     }
 }

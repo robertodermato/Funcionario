@@ -22,6 +22,10 @@ public class Empresa {
 
     @Override
     public String toString() {
+        String emps = "";
+        for (Funcionario emp: empregados){
+            emps= emps + emp + "\n";
+        }
         return "Empresa - Nome: " + nome +
                 "\nQuadro de funcionários:\n" + empregados;
     }
