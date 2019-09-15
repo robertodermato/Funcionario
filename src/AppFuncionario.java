@@ -30,7 +30,11 @@ public class AppFuncionario {
 
         System.out.println(dermato);
 
-
+        //Exercício 5 - verificando que o CPF já existe
+        Funcionario vanderChao = new FuncionarioChao("Vander Luz", "123.345.456.89", 5000, 0.05);
+        for (Funcionario emp: dermato.getEmpregados()){
+            if (emp.getCPF().equals(vanderChao.getCPF())) System.out.println("CPF já existe");
+        }
 
     }
 }
